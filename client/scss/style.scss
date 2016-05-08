@@ -1,0 +1,46 @@
+$gray: #f5f5f5;
+$green: #b9f6ca;
+$yellow: #ffff8d;
+$blue: #84ffff;
+$purple: #b388ff;
+$red: #ff8a80;
+
+
+
+.gridListBasic {
+  md-grid-list {
+    margin: 8px;
+  }
+
+  .gray {
+    background: $gray;
+  }
+
+  .green {
+    background: $green;
+  }
+
+  .yellow {
+    background: $yellow;
+  }
+
+  .blue {
+    background: $blue;
+  }
+
+  .purple {
+    background: $purple;
+  }
+
+  .red {
+    background: $red;
+  }
+
+  md-grid-tile {
+    transition: all 400ms ease-out 50ms;
+  }
+}
+
+.bg-red {
+  background: $red;
+}
