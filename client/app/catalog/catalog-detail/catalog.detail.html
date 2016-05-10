@@ -1,0 +1,55 @@
+<img class=""
+  ng-src="https://storage.aggregion.com/api/files/{{ catalog.catalog.cover }}/shared/data"
+  fallback-src="{{'https://storage.aggregion.com/api/files/12ce171be47031a58f6d12ddefca93d52bda709b1b720d50cf48747d6cd44cb6/shared/data'}}">
+
+
+<h1 class="text-center">
+  {{ catalog.catalog.title.default }}
+</h1>
+
+<h2 class="text-center">
+  {{ catalog.catalog.description.default }}
+</h2>
+
+
+<image-gallery images="catalog.catalog.previewImages"></image-gallery>
+
+
+<md-list class="md-list--extend">
+  <md-subheader class="md-no-sticky md-list__header">
+    Description
+  </md-subheader>
+
+  <md-list-item class="md-3-line" layout="column">
+    Authors: {{ catalog.catalog.options.authors }}
+  </md-list-item>
+</md-list>
+
+
+<md-list class="md-list--extend">
+  <md-subheader class="md-no-sticky md-list__header">
+    Platform Support
+  </md-subheader>
+
+  <md-list-item class="md-3-line" layout="column"
+    ng-repeat="platformSupport in catalog.catalog.platformSupport">
+      {{ platformSupport }}
+  </md-list-item>
+</md-list>
+
+
+<md-list class="md-list--extend">
+  <md-subheader class="md-no-sticky md-list__header">
+    Files
+  </md-subheader>
+
+  <md-list-item class="md-3-line" layout="column"
+    ng-repeat="bundle in catalog.bundles">
+
+    <md-button class="bg-red"
+      target="_blank"
+      ng-href="https://storage.aggregion.com/api/files/{{ bundle.resourceId }}/shared/data">
+        Download
+    </md-button>
+  </md-list-item>
+</md-list>

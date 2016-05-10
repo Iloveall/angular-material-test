@@ -4,7 +4,29 @@ $yellow: #ffff8d;
 $blue: #84ffff;
 $purple: #b388ff;
 $red: #ff8a80;
+$white: #fff;
 
+
+.menu {
+  background: $red;
+
+  &__button {
+    color: $white;
+  }
+}
+
+
+.page {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  &__content {
+    height: 100%;
+    margin-top: -51px;
+  }
+}
 
 
 .gridListBasic {
@@ -43,4 +65,42 @@ $red: #ff8a80;
 
 .bg-red {
   background: $red;
+}
+
+.bg-blue {
+  background: $blue;
+}
+
+.bg-green {
+  background: $green;
+}
+
+.cover {
+  padding: 30px 70px;
+
+  color: #fff;
+  font-size: 22px;
+}
+
+.error {
+  &__title {
+    text-align: center;
+  }
+
+  &__button {
+    text-align: center;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+.md-list {
+  &--extend {
+    .md-list__header {
+      background: $gray;
+    }
+  }
 }

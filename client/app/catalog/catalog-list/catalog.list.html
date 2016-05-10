@@ -7,15 +7,16 @@
   <md-grid-tile
       ng-class-even="'blue'" ng-class-odd="'green'"
       md-rowspan="2" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1"
-      ng-repeat="book in books.data.list">
+      ng-repeat="catalog in catalog.catalog" ui-sref="catalog.detail({ id: catalog.id })">
 
       <img class="md-card-image" alt="Washed Out"
-        ng-src="https://storage.aggregion.com/api/files/{{ book.cover }}/shared/data"
+        ng-src="https://storage.aggregion.com/api/files/{{ catalog.cover }}/shared/data"
         fallback-src="{{'https://storage.aggregion.com/api/files/12ce171be47031a58f6d12ddefca93d52bda709b1b720d50cf48747d6cd44cb6/shared/data'}}">
 
     <md-grid-tile-footer>
-      <h3>{{ book.title.default }}</h3>
+      <h3>{{ catalog.title.default }}</h3>
     </md-grid-tile-footer>
+
   </md-grid-tile>
 
 </md-grid-list>
